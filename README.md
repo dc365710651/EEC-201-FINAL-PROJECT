@@ -8,3 +8,5 @@ EEC 201 Final Project
 The sampling rate: 12500
 
 The milliseconds: 20.48
+
+### Test 3:
