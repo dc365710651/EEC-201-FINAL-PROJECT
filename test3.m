@@ -30,6 +30,9 @@ hold on;
 for i = 1:p
     plot(freq_axis, m(i,:), 'LineWidth', 1.5);
 end
+xlabel("Hz")
+ylabel("Magnitude")
+title("Mel-spaced filter bank responses")
 hold off;
 
 % Choose one frame
