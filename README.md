@@ -9,6 +9,22 @@ The sampling rate: 12500
 
 The milliseconds: 20.48
 
+### Use STFT to generate periodogram
+
+#### Example for the first speaker
+
+Frame size: N=128
+
+![stft_128](https://github.com/dc365710651/EEC-201-FINAL-PROJECT/blob/main/images/stft_128.png)
+
+Frame size: N=256
+
+![stft_256](https://github.com/dc365710651/EEC-201-FINAL-PROJECT/blob/main/images/stft_256.png)
+
+Frame size: N=512
+
+![stft_512](https://github.com/dc365710651/EEC-201-FINAL-PROJECT/blob/main/images/stft_512.png)
+
 ### Test 3:
 
 Example for the first speaker
