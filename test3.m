@@ -15,7 +15,7 @@ y = y / max(abs(y));
 N_fft = 256;
 
 % Number of the mel
-p = 20;
+p = 26;
 
 % Plot the mel-spaced filter bank responses
 m = melfb_own(p, N_fft, Fs);
