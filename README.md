@@ -45,7 +45,7 @@ This figure shows the plot for the ninth speaker after converting into mono and 
 
 In this section, we use Short-time Fourier Transform (STFT) to generate the periodogram for each signal with three different frame sizes: 128, 256, 512. The frame increment M is set as $\frac{N}{3}$ and the window appied is hamming window, which is 
 
-$$w(n)=0.54-0.46cos(2\pi\frac{n}{N}), 0\leq n\leqN$$
+$$w(n)=0.54-0.46cos(2\pi\frac{n}{N}), 0\leq n\leq N$$
 
 #### Example for the first speaker
 
@@ -60,6 +60,10 @@ Frame size: N=256
 Frame size: N=512
 
 ![stft_512](https://github.com/dc365710651/EEC-201-FINAL-PROJECT/blob/main/images/stft_512.png)
+
+According to the figures, we found that a lower frame size results in higher time resolution but lower frequency resolution. In contrast, a higher frame size results in lower time resolution but higher frequency resolution.
+
+The results show that the energy is mainly concentrated at low and medium frequencies from 200 ms to 800 ms. Additionally, there is also a significant energy at high frequencies around 220 ms to 330 ms because of the first letter "z" of word "zero."
 
 ### Test 3:
 
