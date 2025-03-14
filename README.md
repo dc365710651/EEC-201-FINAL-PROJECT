@@ -5,6 +5,10 @@ EEC 201 Final Project
 
 Speaker recognition is a popular task in the field of Speech processing. This task is designed to match the audio to different speakers to verify the identity of each speaker. In current research, Mel-frequency cepstrum technology has demonstrated great performance since it is close to the human auditory system. In addition, vector quantization is a data compression technology that makes signal processing more efficient than original data. Hence, In this project, we implement a speaker recognition algorithm based on the Mel-frequency cepstrum coefficients (MFCCs) processor and Vector Quantization method. The recognition accuracy of the algorithm has achieved satisfactory results in different tests in this project.
 
+## Data Collection
+
+In this project, the algorithm is implement on three dataset, *non-student speech*, 2024 Student Audio Recording, 2025 Student Audio Recording. Non-student speech dataset 
+
 ## B. Speech Preprocessing
 
 ### Test 2:
