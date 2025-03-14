@@ -13,6 +13,8 @@ The **2024 Student Audio Recording** dataset consists of 76 audio recordings, in
 
 Similarly, the **2025 Student Audio Recording** dataset consists of 92 audio recordings, including 46 recordings of "five" and 46 recordings of "eleven." Half of "five" forms the training set, and the remaining half forms the testing set. The same split applies to the "eleven" recordings.
 
+We develop this algorithm and train the recognition system based on **non-student speech** dataset from test 1 to test 8. And for test 9, we retrained the system on a mixed dataset combining **non-student speech** and **2024 Student Audio Recording** datasets. For test 10a and test 10b, we retrained the system on **2024 Student Audio Recording** and **2025 Student Audio Recording** datasets respectively.
+
 ### Test 1:
 
 In this test, we first played the training samples from the **non-student speech** dataset. Then, we played the testing samples from the same dataset in random order for manual recognition and identity matching. Then, we recorded our manual recognition results as a benchmark accuracy rate to compare with the algorithm results in the following tests to evaluate the algorithm performance.
@@ -23,9 +25,9 @@ For the **non-student speech** dataset, the accuracy rate obtained through our h
 
 ### Test 2:
 
-The sampling rate: 12500
+In this test, we input each sounds to MATLAB first to check the sampling rate, milliseconds of speech in a block of 256 samples and plot the signal in time domin.
 
-The milliseconds: 20.48
+Recordings 9 to 11 are stereo. Therefore, we compute the mean of the two channels to convert them into mono. The sampling rate of each recording reported is 12500 Hz and the milliseconds reported is 20.48 ms.
 
 ### Use STFT to generate periodogram
 
