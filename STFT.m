@@ -32,7 +32,7 @@ for i = 1:length(frame_sizes)
     figure;
     imagesc(t*1000, f, 10*log10(Periodogram));
     axis xy;
-    xlabel("time/seconds")
+    xlabel("time/milliseconds")
     ylabel("Hz")
     title("Periodogram of audio 1")
 end
