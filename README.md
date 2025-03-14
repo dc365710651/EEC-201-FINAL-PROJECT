@@ -1,5 +1,5 @@
-# EEC201FINALPROJECT
-EEC 201 Final Project
+# EEC 201 FINAL PROJECT
+Speaker recognition
 
 ## Introduction
 
