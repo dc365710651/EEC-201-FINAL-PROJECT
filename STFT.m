@@ -30,7 +30,7 @@ for i = 1:length(frame_sizes)
     
     % Locate the region in the plot that contains most of the energy
     figure;
-    imagesc(t, f, 10*log10(Periodogram));
+    imagesc(t*1000, f, 10*log10(Periodogram));
     axis xy;
     xlabel("time/seconds")
     ylabel("Hz")
