@@ -43,6 +43,10 @@ This figure shows the plot for the ninth speaker after converting into mono and 
 
 ### Use STFT to generate periodogram
 
+In this section, we use Short-time Fourier Transform (STFT) to generate the periodogram for each signal with three different frame sizes: 128, 256, 512. The frame increment M is set as $\frac{N}{3}$ and the window appied is hamming window, which is 
+
+$$w(n)=0.54-0.46cos(2\pi\frac{n}{N}), 0\leq n\leqN$$
+
 #### Example for the first speaker
 
 Frame size: N=128
