@@ -7,7 +7,11 @@ Speaker recognition is a popular task in the field of Speech processing. This ta
 
 ## Data Collection
 
-In this project, the algorithm is implement on three dataset, *non-student speech*, 2024 Student Audio Recording, 2025 Student Audio Recording. Non-student speech dataset 
+In this project, the algorithm is implemented on three datasets: **non-student speech**, **2024 Student Audio Recording**, and **2025 Student Audio Recording**. The **Non-student speech** dataset consists of 19 audio recordings, all of which contain the word "zero." The training set contains 11 samples, and the remaining 11 samples constitute the testing set.
+
+The **2024 Student Audio Recording** dataset consists of 76 audio recordings, including 38 recordings of "zero" and 38 recordings of "twelve." Half of "zero" forms the training set, and the remaining half of "zero" forms the testing set. The same split applies to the "twelve" recordings.
+
+Similarly, the **2025 Student Audio Recording** dataset consists of 92 audio recordings, including 46 recordings of "five" and 46 recordings of "eleven." Half of "five" forms the training set, and the remaining half of "five" forms the testing set. The same split applies to the "eleven" recordings.
 
 ## B. Speech Preprocessing
 
