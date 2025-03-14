@@ -27,7 +27,19 @@ For the **non-student speech** dataset, the accuracy rate obtained through our h
 
 In this test, we input each sounds to MATLAB first to check the sampling rate, milliseconds of speech in a block of 256 samples and plot the signal in time domin.
 
-Recordings 9 to 11 are stereo. Therefore, we compute the mean of the two channels to convert them into mono. The sampling rate of each recording reported is 12500 Hz and the milliseconds reported is 20.48 ms.
+Recordings 9 to 11 are stereo. Therefore, we compute the mean of the two channels to convert them into mono.Also, we applied amplitude normalization to each signal, which is $\frac{y}{max(abs(y))}$.
+
+The sampling rate of each recording reported is 12500 Hz and the milliseconds reported is 20.48 ms.
+
+**Example for the ninth speaker**
+
+This figure shows the original plot for the ninth speaker.
+
+![original](https://github.com/dc365710651/EEC-201-FINAL-PROJECT/blob/main/images/signal_9_in_time_domin.png)
+
+This figure shows the plot for the ninth speaker after converting into mono and normalization.
+
+![norm](https://github.com/dc365710651/EEC-201-FINAL-PROJECT/blob/main/images/norm_signal_9_in_time_domin.png)
 
 ### Use STFT to generate periodogram
 
