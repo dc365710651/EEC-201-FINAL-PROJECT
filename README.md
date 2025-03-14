@@ -67,6 +67,8 @@ The results show that the energy is mainly concentrated at low and medium freque
 
 ### Test 3:
 
+In this test, we first generate the mel-spaced filter bank responses based on the function *melfb_own* with the parameters: number of filters in filterbank $p=26$, length of fft $n=256$, and sample rate in Hz $fs=12500$. The function *melfb_own* is used to calculate the Mel Filter Bank, which output is the filter bank matrix.
+
 Example for the first speaker
 
 ![Mel-spaced filter bank responses](https://github.com/dc365710651/EEC-201-FINAL-PROJECT/blob/main/images/test_3_1.png)
