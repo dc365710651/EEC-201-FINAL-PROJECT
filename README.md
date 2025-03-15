@@ -83,6 +83,16 @@ Then, we plot the spectrum before and after applying mel-frequency wrapping for 
 
 As we expected, the frequency range is converted to 0–26 Hz, corresponding to 26 Mel-filters. The Mel-frequency wrapping preserved low frequencies components while compressed the high frequencies components to make them smoother. This technology makes the signals more aligned with the characteristics of the human auditory system.
 
+### Test 4:
+
+In this test, we combined all steps above together with the "Cepstrum" to implement the MFCC algorithm. Cepstrum involves the Discrete Cosine Transform (DCT), which is
+
+$$\tilde{c}_n=\sum_1^K (\log \tilde{S}_k)\cos[n(k-\frac{1}{2})\frac{\pi}{K}],    n=0,1,...,K-1,$$
+
+where $$\tilde{c}_n$$ is MFCCs.
+
+After taking the logarithm of the Mel-frequency spectrum, we applied DCT to log Mel-frequency coefficients. The first coefficient was discarded from the results since this coefficient only represents the mean of the signal, which contains little speaker specific information.
+
 ### Test 5:
 
 Example for the first three speakers
