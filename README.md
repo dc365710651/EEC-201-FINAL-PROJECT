@@ -67,13 +67,21 @@ The results show that the energy is mainly concentrated at low and medium freque
 
 ### Test 3:
 
-In this test, we first generate the mel-spaced filter bank responses based on the function *melfb_own* with the parameters: number of filters in filterbank $p=26$, length of fft $n=256$, and sample rate in Hz $fs=12500$. The function *melfb_own* is used to calculate the Mel Filter Bank, which output is the filter bank matrix.
+In this test, we first generate the mel-spaced filter bank responses using the function *melfb_own* with the parameters: number of filters in filter bank $p=26$, length of fft $n=256$, and sample rate in Hz $fs=12500$. The function *melfb_own* is used to calculate the Mel Filter Bank including Mel scaling, FFT, weighting , with the output filter bank matrix.
+
+![Mel-spaced filter bank responses](https://github.com/dc365710651/EEC-201-FINAL-PROJECT/blob/main/images/test_3_1.png)
+
+The theoretical responses we expected to obtain are triangular. As we can see, the shape of each filter is generally consistent with the theoretical expectation.
+
+Then, we plot the spectrum before and after applying mel-frequency wrapping for the first speaker as the example to explore the impact of this step.
 
 Example for the first speaker
 
-![Mel-spaced filter bank responses](https://github.com/dc365710651/EEC-201-FINAL-PROJECT/blob/main/images/test_3_1.png)
 ![test 3 2](https://github.com/dc365710651/EEC-201-FINAL-PROJECT/blob/main/images/test_3_2.png)
+
 ![test 3 3](https://github.com/dc365710651/EEC-201-FINAL-PROJECT/blob/main/images/test_3_3.png)
+
+As we expected, the frequency range is converted to 0–26 Hz, corresponding to 26 Mel-filters. The Mel-frequency wrapping preserved low frequencies components while compressed the high frequencies components. This technology makes the signals more aligned with the characteristics of the human auditory system.
 
 ### Test 5:
 
