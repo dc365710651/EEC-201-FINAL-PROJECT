@@ -105,7 +105,14 @@ As the figure shows, the points exhibit some clustering but are weak. The points
 
 ### Test 6:
 
-In order to improve the clustering, we trained a VQ codebook using the LGB algorithm. The algorithm employs Nearest Neighbor Search based on Euclidean Distance and iteratively updates the centroids. It compresses the data into several important features based on K-means, which can significantly reduce the confusion caused by unnecessary features and make the data points more structured.
+In order to improve the clustering, we trained a VQ codebook using the LGB algorithm. The algorithm first calculates the centroid of the vectors in the training set to form the initial codebook, and then doubles the size of the codebook by splitting the codebook, which is given by
+
+$$y_n^+=y_n(1+\epsilon),$$
+$$y_n^-=y_n(1-\epsilon),$$
+
+where $\epsilon$ is the splitting parameter.
+
+The algorithm employs Nearest Neighbor Search based on Euclidean Distance and iteratively updates the centroids. It compresses the data into several important features based on K-means, which can significantly reduce the confusion caused by unnecessary features and make the data points more structured.
 
 **Example for the first three speakers**
 
