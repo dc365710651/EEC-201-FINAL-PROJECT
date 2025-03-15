@@ -138,13 +138,24 @@ The parameters for this test is given below.
 Eventually, the accuracy rate of this speaker recognition system on the **non-student speech** dataset is **100%**, which is significantly better than human.
 
 ### Test 8:
-Accuracy rate = 87.5%
+Accuracy rate = 100%
 
-### Test 9_Five:
-Accuracy rate = 95.65%
+In the original speaker recognition process, a number of notch filters are added to the test audio, and then the recognition accuracy is measured to verify the stability of the system when some frequency information is lost. In this test, uses MATLAB's iirnotch function to implement notch filtering. Similar to Test7, the VQ codebook is trained by using the training set, and then several test audios are read in turn. The notch filter is performed on each audio, and then the MFCC feature is extracted, compared with the codebook of each speaker, and the recognition accuracy is calculated. 
 
-### Test 9_Eleven:
-Accuracy rate = 95.65%
+In this test, we select notchFrequencies = 60, codebookSize = 128, numMelFilters = 26, numCepstra = 12, as a demonstration and got the accuracy rate = 100%.
 
-### Test 10:
-Accuracy rate = 97.83%
+### Test 9:
+Accuracy rate = 94.44%
+
+In this test, we randomly selected speech "zero" of 10 students from 2024 we recorded twice: one for training and one for test. Here we have 18 speakers in total, and codebookSize = 128, numMelFilters = 26, numCepstra = 12, as a demonstration and got the accuracy rate = 94.44%. Compared with the accuracy obtained previously, the output shows that: Test file s15.wav => recognized as Speaker 16, which is a mismatch in additional 'zero'. 
+
+
+### Test 10_a(Twelve/Zero):
+Overall speaker identification accuracy: 91.67%
+Overall word identification accuracy: 97.22%
+
+
+
+### Test 10_b(Five/Eleven):
+Overall speaker identification accuracy: 97.83%
+Overall word identification accuracy: 100.00%
