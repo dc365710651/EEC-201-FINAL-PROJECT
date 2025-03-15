@@ -95,15 +95,23 @@ After taking the logarithm of the Mel-frequency spectrum, we applied DCT to log 
 
 ### Test 5:
 
-Example for the first three speakers
+In this test, we used the algorithm previously developed to obtain the MFCC vectors of the first three speakers as an example to check the clustering behavior. The dimensions we chose is the first and second dimensions. In the process of obtaining the MFCC vectors, the first frame consists of the first 100 samples and the second frame begins 100 samples after the first frame, and overlaps it by 156 samples.
+
+**Example for the first three speakers**
 
 ![MFCC](https://github.com/dc365710651/EEC-201-FINAL-PROJECT/blob/main/images/test_5.png)
 
+As the figure shows, the points exhibit some clustering but are weak. The points in the central area are densely distributed, and there is significant overlap among the points from the three speakers.
+
 ### Test 6:
 
-Example for the first three speakers
+In order to improve the clustering, we trained a VQ codebook using the LGB algorithm. The algorithm employs Nearest Neighbor Search based on Euclidean Distance and iteratively updates the centroids. It compresses the data into several important features based on K-means, which can significantly reduce the confusion caused by unnecessary features and make the data points more compact and structured.
+
+**Example for the first three speakers**
 
 ![VQ codewords](https://github.com/dc365710651/EEC-201-FINAL-PROJECT/blob/main/images/test_6.png)
+
+The filled markers are the centroids of each clustering, which represent the features of each speaker.
 
 ### Test 7:
 Accuracy rate = 100%
