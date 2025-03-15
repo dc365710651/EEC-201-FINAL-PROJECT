@@ -105,7 +105,7 @@ As the figure shows, the points exhibit some clustering but are weak. The points
 
 ### Test 6:
 
-In order to improve the clustering, we trained a VQ codebook using the LGB algorithm. The algorithm employs Nearest Neighbor Search based on Euclidean Distance and iteratively updates the centroids. It compresses the data into several important features based on K-means, which can significantly reduce the confusion caused by unnecessary features and make the data points more compact and structured.
+In order to improve the clustering, we trained a VQ codebook using the LGB algorithm. The algorithm employs Nearest Neighbor Search based on Euclidean Distance and iteratively updates the centroids. It compresses the data into several important features based on K-means, which can significantly reduce the confusion caused by unnecessary features and make the data points more structured.
 
 **Example for the first three speakers**
 
@@ -114,7 +114,21 @@ In order to improve the clustering, we trained a VQ codebook using the LGB algor
 The filled markers are the centroids of each clustering, which represent the features of each speaker.
 
 ### Test 7:
-Accuracy rate = 100%
+
+In this test we trained our algorithm on the training set from **non-student speech** dataset and then evaluated the accuracy rate on the testing set.
+
+First, we calculate the MFCCs of the training set and generated the codebooks. Then, we computed the MFCCs of the testing set and the distortions between the the MFCCs of the testing set and codebooks of training set. The index of the minimal value of distortions was considered as the prediction of the speaker for the given audio.
+
+The parameters for this test is given below.
+
+| Parameter   | Explanation |   Value  |
+|    :---:    |   :----:    |   :---:  |
+| K           | Number of vectors in codebook | 17 |
+| epsilon     | Splitting parameter | 0.01 |
+| threshold   | Convergent condition | 1e-5  |
+| max_iter   | Maximum number of iterations | 100 |
+
+Eventually, the accuracy rate of this speaker recognition system on the **non-student speech** dataset is **100%**, which is significantly better than human.
 
 ### Test 8:
 Accuracy rate = 87.5%
