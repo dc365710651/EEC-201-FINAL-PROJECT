@@ -49,15 +49,15 @@ $$w(n)=0.54-0.46cos(2\pi\frac{n}{N}), 0\leq n\leq N$$
 
 #### Example for the first speaker
 
-Frame size: N=128
+**Frame size: N=128**
 
 ![stft_128](https://github.com/dc365710651/EEC-201-FINAL-PROJECT/blob/main/images/stft_128.png)
 
-Frame size: N=256
+**Frame size: N=256**
 
 ![stft_256](https://github.com/dc365710651/EEC-201-FINAL-PROJECT/blob/main/images/stft_256.png)
 
-Frame size: N=512
+**Frame size: N=512**
 
 ![stft_512](https://github.com/dc365710651/EEC-201-FINAL-PROJECT/blob/main/images/stft_512.png)
 
@@ -75,13 +75,13 @@ The theoretical responses we expected to obtain are triangular. As we can see, t
 
 Then, we plot the spectrum before and after applying mel-frequency wrapping for the first speaker as the example to explore the impact of this step.
 
-Example for the first speaker
+**Example for the first speaker**
 
 ![test 3 2](https://github.com/dc365710651/EEC-201-FINAL-PROJECT/blob/main/images/test_3_2.png)
 
 ![test 3 3](https://github.com/dc365710651/EEC-201-FINAL-PROJECT/blob/main/images/test_3_3.png)
 
-As we expected, the frequency range is converted to 0–26 Hz, corresponding to 26 Mel-filters. The Mel-frequency wrapping preserved low frequencies components while compressed the high frequencies components. This technology makes the signals more aligned with the characteristics of the human auditory system.
+As we expected, the frequency range is converted to 0–26 Hz, corresponding to 26 Mel-filters. The Mel-frequency wrapping preserved low frequencies components while compressed the high frequencies components to make them smoother. This technology makes the signals more aligned with the characteristics of the human auditory system.
 
 ### Test 5:
 
