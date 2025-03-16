@@ -151,11 +151,33 @@ In this test, we randomly selected speech "zero" of 10 students from 2024 we rec
 
 
 ### Test 10_a(Twelve/Zero):
+
 Overall speaker identification accuracy: 91.67%
+
 Overall word identification accuracy: 97.22%
 
+Accuracy for "Twelve" across 18 speakers of 2024 = 94.44%
+
+Accuracy for "Zero" across 18 speakers of 2024 = 88.89%
+
+If we use "twelve" to identify speakers (codebookSize = 128, numMelFilters = 26, numCepstra = 12), the accuracy versus the system that uses "zero" (codebookSize = 32, numMelFilters = 40, numCepstra = 25) improved to 94.44%. There are two mismatches of "Zero": Zero-Word: s6.wav => recognized as Speaker 10, Zero-Word: s11.wav => recognized as Speaker 12. For "Twelve", there is only one mismatch: Twelve-Word: s11.wav => recognized as Speaker 12.
+
+If we train a whole system that tries to identify which speaker and whether the speech is "zero" or "twelve", overall speaker identification accuracy is 91.67%, overall word identification accuracy is 97.22%. In this test, we will test both "Zero" and "Twelve" files. For each test file, we check distances against all codebooks (both Zero and Twelve). Whichever codebook is closest, we take that as the predicted speaker and word. For this test, codebookSize = 32, numMelFilters = 40, numCepstra = 25. From the result, we can find three mismatches: Test file: Zero_test6.wav => Predicted: Speaker 10, Word "Zero", Test file: Twelve_test14.wav => Predicted: Speaker 12, Word "Twelve", Test file: Twelve_test15.wav => Predicted: Speaker 5, Word "Zero".
 
 
 ### Test 10_b(Five/Eleven):
+
 Overall speaker identification accuracy: 97.83%
+
 Overall word identification accuracy: 100.00%
+
+Accuracy for "Five" across 23 speakers of 2025 = 95.65%
+
+Accuracy for "Eleven" across 23 speakers of 2025 = 100.00%
+
+If we use "Eleven" to identify speakers (codebookSize = 128, numMelFilters = 26, numCepstra = 12), the accuracy is 100%. For the test of "Five" (codebookSize = 32, numMelFilters = 40, numCepstra = 25) the accuracy is 95.65%. There is only one mismatch of "Five": Five-Word: s18.wav => recognized as Speaker 13.
+
+If we train a whole system that tries to identify which speaker and whether the speech is "Five" or "Eleven", overall speaker identification accuracy is 97.83%, overall word identification accuracy is 100%. In our system, codebookSize = 128, numMelFilters = 26, numCepstra = 12. There is only one mismatch: Test file: Five s18.wav => Predicted: Speaker 13, Word "Five". Compared with the test in 10a, the accuracy improved a lot.
+
+
+
